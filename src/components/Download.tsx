@@ -1,5 +1,5 @@
 import { useInView } from '../hooks/useInView'
-import { img } from '../lib/assets'
+import { parrotSideView, starsImg } from '../assets/images'
 
 function AppStoreLarge() {
   return (
@@ -117,7 +117,7 @@ export default function Download() {
             {/* Parrot side view */}
             <div className="relative z-10 animate-float">
               <img
-                src={img('/images/parrot-side-view.png')}
+                src={parrotSideView}
                 alt="Parrotix parrot"
                 className="w-72 md:w-96 object-contain"
                 style={{ filter: 'drop-shadow(0 16px 48px rgba(255,155,35,0.3))' }}
@@ -127,7 +127,7 @@ export default function Download() {
             {/* Floating achievement cards */}
             <div className="absolute top-8 right-0 lg:-right-4 z-20 animate-float-slow">
               <div className="flex items-center gap-3 px-4 py-3 glass rounded-2xl shadow-xl">
-                <img src={img('/images/3stars.png')} alt="Stars" className="w-10 h-10 object-contain" />
+                <img src={starsImg} alt="Stars" className="w-10 h-10 object-contain" />
                 <div>
                   <div className="text-white font-fredoka font-semibold text-sm leading-none">Perfect Lesson!</div>
                   <div className="text-gray-400 text-[10px] font-inter mt-0.5">+100 XP bonus earned</div>
