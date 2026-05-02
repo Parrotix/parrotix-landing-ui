@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(D:Command Centerpython project_launcher.py -g plurality -c)"
+    ]
+  }
+}
