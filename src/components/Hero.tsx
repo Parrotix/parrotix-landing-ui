@@ -1,4 +1,5 @@
 import { Star, Flame, Trophy, Zap } from 'lucide-react'
+import { img } from '../lib/assets'
 
 function AppStoreBtn() {
   return (
@@ -85,10 +86,10 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-brand-dark overflow-hidden">
-                    <img src="/images/ali.jpg" alt="User" className="w-full h-full object-cover" />
+                    <img src={img('/images/ali.jpg')} alt="User" className="w-full h-full object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-brand-dark overflow-hidden">
-                    <img src="/images/sara.jpg" alt="User" className="w-full h-full object-cover" />
+                    <img src={img('/images/sara.jpg')} alt="User" className="w-full h-full object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-brand-dark bg-brand-purple flex items-center justify-center text-white text-xs font-bold">
                     B
@@ -123,7 +124,7 @@ export default function Hero() {
                 </div>
                 {/* Screen content */}
                 <img
-                  src="/images/journey-screen.png"
+                  src={img('/images/journey-screen.png')}
                   alt="Parrotix app journey screen"
                   className="w-full h-full object-cover object-top pt-10"
                 />
@@ -139,7 +140,7 @@ export default function Hero() {
             {/* Parrot mascot floating above */}
             <div className="absolute -top-8 right-8 lg:right-4 z-20 animate-float">
               <img
-                src="/images/parrot-flying.png"
+                src={img('/images/parrot-flying.png')}
                 alt="Parrotix parrot mascot"
                 className="w-28 h-28 object-contain drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 8px 24px rgba(21,173,226,0.5))' }}

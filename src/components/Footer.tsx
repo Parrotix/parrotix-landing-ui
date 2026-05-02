@@ -1,3 +1,5 @@
+import { img } from '../lib/assets'
+
 const footerLinks = {
   Product: [
     { label: 'Features', href: '#features' },
@@ -67,7 +69,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <a href="#" className="flex items-center gap-2.5 mb-5 group">
               <img
-                src="/images/parrot-flying.png"
+                src={img('/images/parrot-flying.png')}
                 alt="Parrotix"
                 className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-200"
               />

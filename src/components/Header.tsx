@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { img } from '../lib/assets'
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -32,7 +33,7 @@ export default function Header() {
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 md:w-11 md:h-11 relative overflow-hidden">
               <img
-                src="/images/parrot-flying.png"
+                src={img('/images/parrot-flying.png')}
                 alt="Parrotix"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-200 drop-shadow-md"
               />

@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
+import { img } from '../lib/assets'
 
 const leaderboard = [
   { rank: 1, name: 'Ali Khan', city: 'Karachi', xp: '12,450', avatar: 'A', color: 'bg-yellow-500' },
@@ -22,7 +23,7 @@ const testimonials = [
     location: 'Karachi, Pakistan',
     rating: 5,
     text: "Parrotix نے میری انگریزی بالکل بدل دی! The streak system keeps me coming back every single day. I'm on day 45 now and my English is unrecognisable compared to before.",
-    avatar: '/images/ali.jpg',
+    avatar: img('/images/ali.jpg'),
     level: 'Level 8 Learner',
   },
   {
@@ -30,7 +31,7 @@ const testimonials = [
     location: 'Lahore, Pakistan',
     rating: 5,
     text: "I tried Duolingo, Babbel — nothing stuck. Parrotix is the first app that actually understands Urdu speakers. The conversation games are incredibly realistic and fun!",
-    avatar: '/images/sara.jpg',
+    avatar: img('/images/sara.jpg'),
     level: 'Level 12 Learner',
   },
   {
