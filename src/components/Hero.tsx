@@ -1,5 +1,5 @@
 import { Star, Flame, Trophy, Zap } from 'lucide-react'
-import { parrotFlying, journeyScreen, aliImg, saraImg, right_post, hero_right, playstore } from '../assets/images'
+import {  aliImg, saraImg, hero_right, playstore } from '../assets/images'
 
 function AppStoreBtn() {
   return (
