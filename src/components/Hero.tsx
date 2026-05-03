@@ -1,5 +1,5 @@
 import { Star, Flame, Trophy, Zap } from 'lucide-react'
-import { parrotFlying, journeyScreen, aliImg, saraImg, right_post, playstore } from '../assets/images'
+import { parrotFlying, journeyScreen, aliImg, saraImg, right_post, hero_right, playstore } from '../assets/images'
 
 function AppStoreBtn() {
   return (
@@ -113,7 +113,7 @@ export default function Hero() {
          
                 {/* Screen content */}
                 <img
-                  src={right_post}
+                  src={hero_right}
                   alt="Parrotix app journey screen"
                   className="w-full h-full object-cover object-top pt-10"
                 />
@@ -131,7 +131,7 @@ export default function Hero() {
             </div> */}
 
             {/* Floating gamification badge: Streak */}
-            <div className="absolute top-16 -left-6 lg:-left-12 z-20 animate-float-slow">
+            <div className="absolute top-18 -left-6 lg:-left-12 z-20 animate-float-slow">
               <div className="flex items-center gap-2 px-4 py-2.5 glass rounded-2xl shadow-xl">
                 <div className="w-8 h-8 rounded-xl bg-orange-500/20 flex items-center justify-center">
                   <Flame size={16} className="text-brand-orange" />

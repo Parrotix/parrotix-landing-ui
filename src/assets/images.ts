@@ -3,6 +3,7 @@ import parrotSideView from './images/parrot-side-view.png'
 import parrotLogo from './images/parrotix_logo.png'
 import journeyScreen from './images/journey-screen.png'
 import right_post from './images/right_post.png'
+import hero_right from './images/hero_right.png'
 import aliImg from './images/ali.jpg'
 import saraImg from './images/sara.jpg'
 import starsImg from './images/3stars.png'
@@ -18,6 +19,7 @@ export {
   parrotLogo,
   journeyScreen,
   right_post,
+  hero_right,
   aliImg,
   saraImg,
   starsImg,
