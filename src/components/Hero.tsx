@@ -1,5 +1,5 @@
 import { Star, Flame, Trophy, Zap } from 'lucide-react'
-import { parrotFlying, journeyScreen, aliImg, saraImg } from '../assets/images'
+import { parrotFlying, journeyScreen, aliImg, saraImg, right_post, playstore } from '../assets/images'
 
 function AppStoreBtn() {
   return (
@@ -24,12 +24,7 @@ function PlayStoreBtn() {
       href="#download"
       className="inline-flex items-center gap-3 px-5 py-3.5 border border-white/25 text-white rounded-2xl hover:bg-white/10 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-white/40 active:translate-y-0"
     >
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0" fill="none">
-        <path d="M3.18 23.76c.36.2.77.22 1.15.06L15.54 12 4.33.18C3.95.02 3.54.04 3.18.24 2.46.64 2 1.4 2 2.28v19.44c0 .88.46 1.64 1.18 2.04z" fill="#EA4335" />
-        <path d="M20.4 10.22l-3.1-1.78-3.67 3.56 3.67 3.56 3.14-1.8c.9-.51.9-1.02 0-1.53h-.04z" fill="#FBBC04" />
-        <path d="M4.33.18L15.54 12 17.3 10.22 5.48.18A2.27 2.27 0 004.33.18z" fill="#4285F4" />
-        <path d="M4.33 23.82a2.27 2.27 0 001.15-.18l11.82-10.04L15.54 12 4.33 23.82z" fill="#34A853" />
-      </svg>
+      <img src={playstore} alt="Play Store" className="w-6 h-6" />
       <div className="text-left">
         <div className="text-[10px] text-white/60 leading-none font-inter">Get it on</div>
         <div className="text-sm font-semibold leading-snug font-inter">Google Play</div>
@@ -57,10 +52,10 @@ export default function Hero() {
           {/* Left: Content */}
           <div className="relative z-10">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-sm font-medium mb-7 animate-fade-in">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-sm font-medium mb-7 animate-fade-in">
               <span className="text-base">🦜</span>
               <span>اردو بولنے والوں کے لیے بنایا گیا</span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-fredoka font-bold text-white leading-[1.05] mb-6">
@@ -115,37 +110,25 @@ export default function Hero() {
             {/* Glow ring behind phone */}
             <div className="absolute w-[320px] h-[320px] rounded-full bg-brand-blue/10 blur-2xl animate-pulse-soft" />
 
-            {/* Phone frame */}
-            <div className="relative w-[270px] h-[560px] z-10">
-              <div className="w-full h-full bg-gray-950 rounded-[3rem] border-[3px] border-gray-700/80 shadow-2xl shadow-black/60 overflow-hidden relative">
-                {/* Status bar */}
-                <div className="absolute top-0 left-0 right-0 h-10 bg-gray-950 z-10 flex items-end justify-center pb-1.5">
-                  <div className="w-[90px] h-[26px] bg-gray-900 rounded-full" />
-                </div>
+         
                 {/* Screen content */}
                 <img
-                  src={journeyScreen}
+                  src={right_post}
                   alt="Parrotix app journey screen"
                   className="w-full h-full object-cover object-top pt-10"
                 />
-                {/* Screen glare overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-              </div>
-              {/* Physical buttons */}
-              <div className="absolute -right-[3px] top-24 w-1 h-9 bg-gray-600 rounded-r-full" />
-              <div className="absolute -left-[3px] top-20 w-1 h-7 bg-gray-600 rounded-l-full" />
-              <div className="absolute -left-[3px] top-30 w-1 h-7 bg-gray-600 rounded-l-full" />
-            </div>
+            
+           
 
             {/* Parrot mascot floating above */}
-            <div className="absolute -top-8 right-8 lg:right-4 z-20 animate-float">
+            {/* <div className="absolute top-18 right-0 z-20 animate-float">
               <img
                 src={parrotFlying}
                 alt="Parrotix parrot mascot"
                 className="w-28 h-28 object-contain drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 8px 24px rgba(21,173,226,0.5))' }}
               />
-            </div>
+            </div> */}
 
             {/* Floating gamification badge: Streak */}
             <div className="absolute top-16 -left-6 lg:-left-12 z-20 animate-float-slow">

@@ -1,9 +1,10 @@
-import { Flame, Trophy, Zap, Mic, Video, Heart } from 'lucide-react'
+import { Flame, Trophy, Zap, Mic, Video, Heart, Gamepad2 } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
+
 
 const features = [
   {
-    icon: <span className="text-3xl">🎮</span>,
+    icon: <Gamepad2 size={24} className="text-brand-blue" />,
     title: '8 Unique Game Modes',
     description:
       'From arcade space shooters to voice-matching challenges — every lesson is a new adventure. Learning never repeats itself.',
@@ -70,8 +71,8 @@ const features = [
     gradient: 'from-red-400 to-pink-500',
     bg: 'bg-red-50',
     iconBg: 'bg-red-100',
-    span: 'md:col-span-2',
-    large: true,
+    span: '',
+    large: false,
   },
 ]
 

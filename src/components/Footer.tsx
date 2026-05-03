@@ -2,17 +2,17 @@ import { parrotFlying } from '../assets/images'
 
 const footerLinks = {
   Product: [
-    { label: 'Features', href: '#features' },
+    // { label: 'Features', href: '#features' },
     { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Game Modes', href: '#game-modes' },
-    { label: 'Parrotix Plus', href: '#pricing' },
+    // { label: 'Game Modes', href: '#game-modes' },
+    // { label: 'Parrotix Plus', href: '#pricing' },
   ],
-  Company: [
-    { label: 'About Us', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Contact', href: '#' },
-  ],
+  // Company: [
+  //   { label: 'About Us', href: '#' },
+  //   { label: 'Blog', href: '#' },
+  //   { label: 'Careers', href: '#' },
+  //   { label: 'Contact', href: '#' },
+  // ],
   Legal: [
     { label: 'Privacy Policy', href: '#' },
     { label: 'Terms of Service', href: '#' },
@@ -81,9 +81,9 @@ export default function Footer() {
             </p>
 
             {/* Urdu tagline */}
-            <p className="text-gray-600 font-inter text-sm mb-6" dir="rtl">
+            {/* <p className="text-gray-600 font-inter text-sm mb-6" dir="rtl">
               سیکھیں، کھیلیں، جیتیں۔
-            </p>
+            </p> */}
 
             {/* Socials */}
             <div className="flex items-center gap-3">

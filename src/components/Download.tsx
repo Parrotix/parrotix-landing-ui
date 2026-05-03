@@ -1,5 +1,5 @@
 import { useInView } from '../hooks/useInView'
-import { parrotSideView, starsImg } from '../assets/images'
+import { parrotSideView, playstore, starsImg } from '../assets/images'
 
 function AppStoreLarge() {
   return (
@@ -24,12 +24,7 @@ function PlayStoreLarge() {
       href="#"
       className="inline-flex items-center gap-4 px-7 py-4 bg-white/10 text-white border border-white/20 rounded-2xl hover:bg-white/20 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-white/40 active:translate-y-0"
     >
-      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0" fill="none">
-        <path d="M3.18 23.76c.36.2.77.22 1.15.06L15.54 12 4.33.18C3.95.02 3.54.04 3.18.24 2.46.64 2 1.4 2 2.28v19.44c0 .88.46 1.64 1.18 2.04z" fill="#EA4335" />
-        <path d="M20.4 10.22l-3.1-1.78-3.67 3.56 3.67 3.56 3.14-1.8c.9-.51.9-1.02 0-1.53h-.04z" fill="#FBBC04" />
-        <path d="M4.33.18L15.54 12 17.3 10.22 5.48.18A2.27 2.27 0 004.33.18z" fill="#4285F4" />
-        <path d="M4.33 23.82a2.27 2.27 0 001.15-.18l11.82-10.04L15.54 12 4.33 23.82z" fill="#34A853" />
-      </svg>
+      <img src={playstore} alt="Play Store" className="w-7 h-7" />
       <div className="text-left">
         <div className="text-[11px] text-white/60 leading-none font-inter">Get it on</div>
         <div className="text-base font-bold leading-snug font-inter">Google Play</div>

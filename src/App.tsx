@@ -14,7 +14,7 @@ export default function App() {
     <div className="overflow-x-hidden">
       <Header />
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Features />
       <HowItWorks />
       <GameModes />
