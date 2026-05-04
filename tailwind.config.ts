@@ -45,7 +45,59 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss/plugin')(({ addComponents }: { addComponents: (components: Record<string, unknown>) => void }) => {
+      addComponents({
+        '.prose-policy': {
+          '& h2': {
+            fontSize: '1.25rem',
+            fontFamily: 'Fredoka, sans-serif',
+            fontWeight: '600',
+            color: '#ffffff',
+            marginTop: '2.5rem',
+            marginBottom: '0.75rem',
+          },
+          '& h3': {
+            fontSize: '1rem',
+            fontWeight: '600',
+            color: '#e2e8f0',
+            marginTop: '1.5rem',
+            marginBottom: '0.5rem',
+          },
+          '& p': {
+            fontSize: '0.9375rem',
+            color: '#94a3b8',
+            lineHeight: '1.75',
+            marginBottom: '1rem',
+          },
+          '& ul': {
+            listStyleType: 'disc',
+            paddingLeft: '1.5rem',
+            marginBottom: '1rem',
+          },
+          '& li': {
+            fontSize: '0.9375rem',
+            color: '#94a3b8',
+            lineHeight: '1.75',
+            marginBottom: '0.25rem',
+          },
+          '& a': {
+            color: '#15ADE2',
+            textDecoration: 'underline',
+          },
+          '& strong': {
+            color: '#e2e8f0',
+            fontWeight: '600',
+          },
+          '& hr': {
+            borderColor: 'rgba(255,255,255,0.05)',
+            marginTop: '2rem',
+            marginBottom: '2rem',
+          },
+        },
+      })
+    }),
+  ],
 }
 
 export default config

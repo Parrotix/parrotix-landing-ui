@@ -1,24 +1,15 @@
+import { Link } from 'react-router-dom'
 import { parrotFlying } from '../assets/images'
 
-const footerLinks = {
-  Product: [
-    // { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    // { label: 'Game Modes', href: '#game-modes' },
-    // { label: 'Parrotix Plus', href: '#pricing' },
-  ],
-  // Company: [
-  //   { label: 'About Us', href: '#' },
-  //   { label: 'Blog', href: '#' },
-  //   { label: 'Careers', href: '#' },
-  //   { label: 'Contact', href: '#' },
-  // ],
-  Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
-  ],
-}
+const productLinks = [
+  { label: 'How It Works', href: '#how-it-works', external: false },
+]
+
+const legalLinks = [
+  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Terms & Conditions', to: '/terms' },
+  { label: 'Refund Policy', to: '/refund' },
+]
 
 const socials = [
   {
@@ -102,24 +93,39 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links columns */}
-          {Object.entries(footerLinks).map(([section, links]) => (
-            <div key={section}>
-              <h4 className="text-white font-fredoka font-semibold text-base mb-5">{section}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-gray-500 font-inter text-sm hover:text-white transition-colors duration-150"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Product links */}
+          <div>
+            <h4 className="text-white font-fredoka font-semibold text-base mb-5">Product</h4>
+            <ul className="space-y-3">
+              {productLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-gray-500 font-inter text-sm hover:text-white transition-colors duration-150"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal links */}
+          <div>
+            <h4 className="text-white font-fredoka font-semibold text-base mb-5">Legal</h4>
+            <ul className="space-y-3">
+              {legalLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.to}
+                    className="text-gray-500 font-inter text-sm hover:text-white transition-colors duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
