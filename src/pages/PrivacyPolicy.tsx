@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
       <ul>
         <li><strong>Address:</strong> D-311 Orange Street, Garden West, Karachi</li>
         <li><strong>Phone:</strong> +92 326 340 9626</li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/923263409626">wa.me/923263409626</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/923263409626">+92 326 340 9626</a></li>
       </ul>
     </PolicyLayout>
   )

@@ -57,7 +57,7 @@ export default function RefundPolicy() {
         approved refunds within 5–7 business days.
       </p>
       <ul>
-        <li><strong>Phone / WhatsApp:</strong> +92 326 340 9626</li>
+        <li><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/923263409626" className="text-brand-blue hover:underline">+92 326 340 9626</a></li>
         <li><strong>Address:</strong> D-311 Orange Street, Garden West, Karachi</li>
       </ul>
 
