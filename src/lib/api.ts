@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_URL ?? 'https://api.parrotix.com'
+const BASE = 'https://api.parrotix.com'
 
 export interface PlanOffer {
   id: string
