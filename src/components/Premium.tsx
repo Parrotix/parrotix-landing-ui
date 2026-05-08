@@ -78,10 +78,9 @@ interface PlusPriceProps {
   plan: Plan | undefined
   cycle: 'monthly' | 'yearly'
   loading: boolean
-  monthlyPrice: number
 }
 
-function PlusPrice({ plan, cycle, loading, monthlyPrice }: PlusPriceProps) {
+function PlusPrice({ plan, cycle, loading }: PlusPriceProps) {
   if (loading) return <PriceSkeleton />
 
   const originalPrice = plan?.pricePkr ?? FALLBACK[cycle]
@@ -312,7 +311,6 @@ export default function Premium() {
                 plan={plusPlan}
                 cycle={cycle}
                 loading={loading}
-                monthlyPrice={monthlyPrice}
               />
             </div>
 
