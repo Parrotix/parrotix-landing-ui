@@ -47,7 +47,7 @@ const features = [
   {
     icon: <Mic size={24} className="text-brand-green" />,
     title: 'Voice Practice',
-    description: 'Speak English and get real-time feedback. Our voice recognition trains your pronunciation naturally.',
+    description: 'Speak English out loud and get instant pronunciation feedback. Build the speaking confidence that typing-only apps never give you.',
     gradient: 'from-green-400 to-teal-500',
     bg: 'bg-green-50',
     iconBg: 'bg-green-100',

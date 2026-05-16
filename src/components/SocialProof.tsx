@@ -1,7 +1,8 @@
-import { Star } from 'lucide-react'
+import { Languages, Trophy, Mic, Smartphone } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
-import { aliImg, saraImg } from '../assets/images'
 
+// Illustrative leaderboard preview — not real users. The "Preview" badge makes this
+// explicit so we're not implying real-time live rankings before launch.
 const leaderboard = [
   { rank: 1, name: 'Ali Khan', city: 'Karachi', xp: '12,450', avatar: 'A', color: 'bg-yellow-500' },
   { rank: 2, name: 'Sara Ahmed', city: 'Lahore', xp: '11,890', avatar: 'S', color: 'bg-pink-500' },
@@ -17,31 +18,36 @@ const rankMedal = (rank: number) => {
   return `#${rank}`
 }
 
-const testimonials = [
+// Honest pre-launch value cards — no fabricated testimonials/user counts.
+// Swap these for real reviews once the app has them.
+const reasons = [
   {
-    name: 'Ali Khan',
-    location: 'Karachi, Pakistan',
-    rating: 5,
-    text: "Parrotix نے میری انگریزی بالکل بدل دی! The streak system keeps me coming back every single day. I'm on day 45 now and my English is unrecognisable compared to before.",
-    avatar: aliImg,
-    level: 'Level 8 Learner',
+    icon: <Languages size={22} className="text-brand-blue" />,
+    iconBg: 'bg-blue-50',
+    title: 'Built for Urdu speakers',
+    body:
+      'Every lesson, hint, and explanation is designed around how Urdu speakers actually learn English — not retrofitted from a generic curriculum.',
   },
   {
-    name: 'Sara Ahmed',
-    location: 'Lahore, Pakistan',
-    rating: 5,
-    text: "I tried Duolingo, Babbel — nothing stuck. Parrotix is the first app that actually understands Urdu speakers. The conversation games are incredibly realistic and fun!",
-    avatar: saraImg,
-    level: 'Level 12 Learner',
+    icon: <Mic size={22} className="text-brand-green" />,
+    iconBg: 'bg-green-50',
+    title: 'Speak from day one',
+    body:
+      'Real pronunciation practice on every lesson — not just typing. Build confidence speaking out loud, not just reading.',
   },
   {
-    name: 'Bilal Malik',
-    location: 'Islamabad, Pakistan',
-    rating: 5,
-    text: "The leaderboard is addictive. I wake up every morning and my first thought is 'I need to protect my rank.' My English speaking confidence has skyrocketed in just 2 months.",
-    avatar: null,
-    initial: 'B',
-    level: 'Level 10 Learner',
+    icon: <Trophy size={22} className="text-brand-purple" />,
+    iconBg: 'bg-purple-50',
+    title: 'Streaks that actually motivate',
+    body:
+      'Daily XP, streaks, and a global leaderboard turn 10 minutes of practice into a habit you look forward to.',
+  },
+  {
+    icon: <Smartphone size={22} className="text-brand-orange" />,
+    iconBg: 'bg-orange-50',
+    title: 'Designed for your phone',
+    body:
+      'Crisp, native Android experience. No bloated web wrapper, no laggy lessons — just smooth, polished gameplay.',
   },
 ]
 
@@ -50,13 +56,10 @@ export default function SocialProof() {
 
   return (
     <section
+      id="social-proof"
       className="section-padding bg-white relative overflow-hidden"
       ref={ref as React.RefObject<HTMLElement>}
     >
-      {/* Decorative gradient */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-brand-purple/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-blue/5 rounded-full translate-x-1/2 translate-y-1/2" />
-
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
         <div
@@ -64,31 +67,31 @@ export default function SocialProof() {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-green/10 text-brand-green rounded-full text-sm font-medium mb-5">
-            🏆 Real Results
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-medium mb-5">
+            🦜 Why Parrotix
           </div>
-          <h2 className="text-4xl md:text-5xl font-fredoka font-bold text-brand-dark mb-5">
-            Join the{' '}
-            <span className="text-gradient-blue">Winning Community</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-fredoka font-bold text-brand-dark mb-5">
+            Made for the way{' '}
+            <span className="text-gradient-blue">you learn</span>
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto font-inter leading-relaxed">
-            Thousands of Urdu speakers are already climbing the leaderboard and speaking English
-            with confidence. Your turn is next.
+          <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto font-inter leading-relaxed">
+            We built Parrotix because every English-learning app out there was designed for someone
+            else. Here's what makes it different.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 items-start">
-          {/* Leaderboard */}
+        <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 items-start">
+          {/* Leaderboard preview */}
           <div
             className={`lg:col-span-2 transition-all duration-700 delay-200 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <div className="bg-brand-dark rounded-3xl p-6 shadow-2xl">
+            <div className="bg-brand-dark rounded-3xl p-5 sm:p-6 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-fredoka font-bold text-white">Global Leaderboard</h3>
-                <span className="text-brand-blue text-xs font-inter font-medium bg-brand-blue/10 px-3 py-1 rounded-full">
-                  Live
+                <h3 className="text-lg sm:text-xl font-fredoka font-bold text-white">Global Leaderboard</h3>
+                <span className="text-brand-blue text-[10px] sm:text-xs font-inter font-medium bg-brand-blue/10 px-3 py-1 rounded-full">
+                  Preview
                 </span>
               </div>
 
@@ -151,53 +154,29 @@ export default function SocialProof() {
                   </a>
                 </div>
               </div>
+              <p className="mt-3 text-center text-[10px] text-gray-600 font-inter">
+                Example leaderboard — your rank starts the moment you install
+              </p>
             </div>
           </div>
 
-          {/* Testimonials */}
+          {/* Reason cards */}
           <div
-            className={`lg:col-span-3 space-y-5 transition-all duration-700 delay-300 ${
+            className={`lg:col-span-3 grid sm:grid-cols-2 gap-4 transition-all duration-700 delay-300 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
-            {testimonials.map((t, i) => (
+            {reasons.map((r, i) => (
               <div
-                key={t.name}
-                className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 group"
-                style={{ transitionDelay: `${i * 100 + 400}ms` }}
+                key={r.title}
+                className="bg-white border border-gray-100 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                style={{ transitionDelay: `${i * 80 + 400}ms` }}
               >
-                {/* Stars */}
-                <div className="flex gap-0.5 mb-4">
-                  {[...Array(t.rating)].map((_, j) => (
-                    <Star key={j} size={14} className="fill-yellow-400 text-yellow-400" />
-                  ))}
+                <div className={`inline-flex items-center justify-center w-11 h-11 rounded-2xl ${r.iconBg} mb-4`}>
+                  {r.icon}
                 </div>
-
-                {/* Quote */}
-                <p className="text-gray-600 font-inter text-sm leading-relaxed mb-5 italic">
-                  "{t.text}"
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-3">
-                  {t.avatar ? (
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      className="w-10 h-10 rounded-full object-cover ring-2 ring-brand-blue/20 group-hover:ring-brand-blue/40 transition-all"
-                    />
-                  ) : (
-                    <div className="w-10 h-10 rounded-full bg-brand-purple flex items-center justify-center text-white font-fredoka font-bold text-sm">
-                      {(t as { initial?: string }).initial}
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-brand-dark font-fredoka font-semibold text-sm">{t.name}</div>
-                    <div className="text-gray-400 text-xs font-inter">
-                      {t.location} · {t.level}
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-lg font-fredoka font-bold text-brand-dark mb-2">{r.title}</h3>
+                <p className="text-gray-600 font-inter text-sm leading-relaxed">{r.body}</p>
               </div>
             ))}
           </div>

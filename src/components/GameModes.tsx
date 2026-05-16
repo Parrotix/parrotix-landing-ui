@@ -18,7 +18,7 @@ const gameModes = [
   {
     emoji: '🎤',
     title: 'Speak & Match',
-    description: 'Pronounce English words clearly and get instant AI-powered feedback on your accent.',
+    description: 'Pronounce English words out loud and get instant pronunciation feedback. Train your speaking, not just your typing.',
     color: 'from-pink-500 to-rose-500',
     tag: 'Speaking',
   },
@@ -45,8 +45,8 @@ const gameModes = [
   },
   {
     emoji: '🚀',
-    title: 'Space Blaster',
-    description: 'Shoot the correct English answer in an arcade space game. Learning meets action.',
+    title: 'Astro Trash',
+    description: 'Blast the correct English answer in an arcade space shooter. Reflexes meet vocabulary.',
     color: 'from-indigo-500 to-purple-600',
     tag: 'Arcade',
   },

@@ -4,32 +4,33 @@ import { useInView } from '../hooks/useInView'
 import { usePlans } from '../hooks/usePlans'
 import { Plan, PlanOffer } from '../lib/api'
 
+// Free vs Plus feature comparison — kept tightly aligned with the actual app.
+// If these claims drift from product reality, Google Play can reject the listing.
 const freeFeatures = [
-  { label: '5 lesson units', included: true },
-  { label: '3 game modes', included: true },
-  { label: '5 hearts per day', included: true },
-  { label: 'Basic leaderboard', included: true },
-  { label: 'Voice practice', included: false },
-  { label: 'All 8 game modes', included: false },
-  { label: 'Offline access', included: false },
-  { label: 'Ad-free experience', included: false },
+  { label: 'First 3 lessons of each unit', included: true },
+  { label: 'All 8 game modes', included: true },
+  { label: 'Daily streaks & XP', included: true },
+  { label: 'Global leaderboard', included: true },
+  { label: 'Every lesson of every unit', included: false },
+  { label: 'New units added monthly', included: false },
+  { label: 'Speaking practice on every lesson', included: false },
 ]
 
 const plusFeatures = [
-  { label: 'All 15 lesson units', included: true },
-  { label: 'All 8 game modes', included: true },
-  { label: 'Unlimited hearts', included: true },
-  { label: 'Full leaderboard + rank badge', included: true },
-  { label: 'Voice recognition practice', included: true },
-  { label: 'Offline mode', included: true },
-  { label: 'Ad-free experience', included: true },
-  { label: 'Priority support', included: true },
+  { label: 'Every lesson, every unit — fully unlocked', included: true },
+  { label: 'All 8 game modes on every lesson', included: true },
+  { label: 'Speaking practice with pronunciation feedback', included: true },
+  { label: 'Daily streaks, XP, and global leaderboard', included: true },
+  { label: 'New units and content added monthly', included: true },
+  { label: 'Cancel anytime via Google Play', included: true },
 ]
 
+// Fallback pricing — only shown if /plans API fails. Must match the live DB values
+// so it never drifts from the Terms & Conditions and Refund Policy pages.
 const FALLBACK = {
-  monthly: 1299,
-  yearly: 11990,
-  monthlyOffer: 799,
+  monthly: 300,
+  yearly: 3000,
+  monthlyOffer: 100,
 }
 
 function formatPkr(amount: number) {

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Star, Flame, Trophy, Zap } from 'lucide-react'
-import {  aliImg, saraImg, hero_right, playstore } from '../assets/images'
+import { Flame, Trophy, Zap } from 'lucide-react'
+import { hero_right, playstore } from '../assets/images'
 
 function AppStoreBtn() {
   const [showSoon, setShowSoon] = useState(false)
@@ -77,58 +77,51 @@ export default function Hero() {
               <span>اردو بولنے والوں کے لیے بنایا گیا</span>
             </div> */}
 
-            {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-fredoka font-bold text-white leading-[1.05] mb-6">
+            {/* Headline — scales down on small phones so it doesn't overrun the column */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-fredoka font-bold text-white leading-[1.05] mb-6">
               Master English.{' '}
               <span className="text-gradient-blue block sm:inline">The Fun Way.</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl leading-relaxed font-inter">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl leading-relaxed font-inter">
               Parrotix turns English learning into an epic adventure for Urdu speakers.
               Earn XP, maintain daily streaks, and battle for the top of the global leaderboard
               — all through 8 uniquely designed games.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10">
               <AppStoreBtn />
               <PlayStoreBtn />
             </div>
 
-            {/* Social proof row */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full border-2 border-brand-dark overflow-hidden">
-                    <img src={aliImg} alt="User" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="w-8 h-8 rounded-full border-2 border-brand-dark overflow-hidden">
-                    <img src={saraImg} alt="User" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="w-8 h-8 rounded-full border-2 border-brand-dark bg-brand-purple flex items-center justify-center text-white text-xs font-bold">
-                    B
-                  </div>
-                </div>
-                <span className="font-medium text-gray-400">50K+ learners</span>
-              </div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={13} className="fill-yellow-400 text-yellow-400" />
-                ))}
-                <span className="ml-1 font-medium text-gray-400">4.9 rating</span>
-              </div>
+            {/* Honest trust strip — no fabricated user counts before launch.
+                Once you have real metrics, swap these for real numbers. */}
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-gray-500">
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
                 <span className="text-gray-400 font-medium">Free to start</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Flame size={14} className="text-brand-orange" />
+                <span className="text-gray-400 font-medium">Daily streaks</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Trophy size={14} className="text-brand-purple" />
+                <span className="text-gray-400 font-medium">Global leaderboard</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-base leading-none">🦜</span>
+                <span className="text-gray-400 font-medium">Built for Urdu speakers</span>
               </div>
             </div>
           </div>
 
           {/* Right: Phone Mockup + Floating Elements */}
-          <div className="relative flex justify-center lg:justify-end items-center min-h-[520px] lg:min-h-0">
+          <div className="relative flex justify-center lg:justify-end items-center min-h-[380px] sm:min-h-[480px] lg:min-h-0">
             {/* Glow ring behind phone */}
-            <div className="absolute w-[320px] h-[320px] rounded-full bg-brand-blue/10 blur-2xl animate-pulse-soft" />
+            <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full bg-brand-blue/10 blur-2xl animate-pulse-soft" />
 
          
                 {/* Screen content */}
@@ -150,8 +143,11 @@ export default function Hero() {
               />
             </div> */}
 
-            {/* Floating gamification badge: Streak */}
-            <div className="absolute top-18 -left-6 lg:-left-12 z-20 animate-float-slow">
+            {/* Floating gamification badges — desktop-only decorative flair.
+                On phones/tablets they overlap the phone mockup and crowd the layout,
+                so we hide them under lg: and show the clean phone image instead. */}
+            {/* Streak */}
+            <div className="hidden lg:block absolute top-18 lg:-left-12 z-20 animate-float-slow">
               <div className="flex items-center gap-2 px-4 py-2.5 glass rounded-2xl shadow-xl">
                 <div className="w-8 h-8 rounded-xl bg-orange-500/20 flex items-center justify-center">
                   <Flame size={16} className="text-brand-orange" />
@@ -163,8 +159,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating gamification badge: XP */}
-            <div className="absolute top-1/3 -right-6 lg:-right-8 z-20 animate-float-delayed">
+            {/* XP */}
+            <div className="hidden lg:block absolute top-1/3 lg:-right-8 z-20 animate-float-delayed">
               <div className="flex items-center gap-2 px-4 py-2.5 glass rounded-2xl shadow-xl">
                 <div className="w-8 h-8 rounded-xl bg-brand-blue/20 flex items-center justify-center">
                   <Zap size={16} className="text-brand-blue" />
@@ -176,8 +172,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating gamification badge: Rank */}
-            <div className="absolute bottom-24 -left-4 lg:-left-10 z-20 animate-float" style={{ animationDelay: '1.5s' }}>
+            {/* Rank */}
+            <div className="hidden lg:block absolute bottom-24 lg:-left-10 z-20 animate-float" style={{ animationDelay: '1.5s' }}>
               <div className="flex items-center gap-2 px-4 py-2.5 glass rounded-2xl shadow-xl">
                 <div className="w-8 h-8 rounded-xl bg-brand-purple/20 flex items-center justify-center">
                   <Trophy size={16} className="text-brand-purple" />
