@@ -41,7 +41,9 @@ function AppStoreBtn() {
 function PlayStoreBtn() {
   return (
     <a
-      href="#download"
+      href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-3 px-5 py-3.5 border border-white/25 text-white rounded-2xl hover:bg-white/10 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-white/40 active:translate-y-0"
     >
       <img src={playstore} alt="Play Store" className="w-6 h-6" />

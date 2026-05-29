@@ -3,6 +3,7 @@ import { parrotFlying } from '../assets/images'
 
 const productLinks = [
   { label: 'How It Works', href: '#how-it-works', external: false },
+  { label: 'Download on Google Play', href: 'https://play.google.com/store/apps/details?id=com.parrotix.app', external: true },
 ]
 
 const legalLinks = [
@@ -101,6 +102,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="text-gray-500 font-inter text-sm hover:text-white transition-colors duration-150"
                   >
                     {link.label}
@@ -135,6 +137,19 @@ export default function Footer() {
           <p className="text-gray-600 font-inter text-xs">
             © {new Date().getFullYear()} Parrotix. All rights reserved.
           </p>
+
+          {/* NG Innovate credit */}
+          <div className="flex items-center gap-2">
+            <span className="text-gray-600 font-inter text-xs">Developed by</span>
+            <img
+              src="/images/ng-innovate-logo.png"
+              alt="NG Innovate"
+              className="h-7 w-auto object-contain"
+              style={{ mixBlendMode: 'screen' }}
+            />
+            <span className="text-gray-500 font-inter text-xs font-medium">NG Innovate</span>
+          </div>
+
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
             <span className="text-gray-600 font-inter text-xs">50,000+ learners online</span>

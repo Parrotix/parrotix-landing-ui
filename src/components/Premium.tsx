@@ -282,7 +282,9 @@ export default function Premium() {
             </ul>
 
             <a
-              href="#download"
+              href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full py-3.5 text-center bg-gray-100 text-brand-dark font-semibold rounded-2xl hover:bg-gray-200 transition-colors duration-200 font-inter"
             >
               Download Free
@@ -327,7 +329,9 @@ export default function Premium() {
             </ul>
 
             <a
-              href="#download"
+              href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative block w-full py-3.5 text-center bg-brand-orange text-white font-semibold rounded-2xl hover:bg-orange-500 transition-all duration-200 hover:shadow-xl hover:shadow-orange-500/30 font-inter"
             >
               Upgrade to Plus →

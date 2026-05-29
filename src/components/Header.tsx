@@ -65,7 +65,9 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#download"
+              href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-brand-orange text-white font-semibold text-sm rounded-full transition-all duration-200 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5 active:translate-y-0"
             >
               Download Free
@@ -105,7 +107,9 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#download"
+            href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-3 px-6 py-3.5 bg-brand-orange text-white font-semibold rounded-full text-center hover:bg-orange-500 transition-colors duration-200"
             onClick={() => setMenuOpen(false)}
           >

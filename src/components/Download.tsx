@@ -41,7 +41,9 @@ function AppStoreLarge() {
 function PlayStoreLarge() {
   return (
     <a
-      href="#"
+      href="https://play.google.com/store/apps/details?id=com.parrotix.app"
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-4 px-7 py-4 bg-white/10 text-white border border-white/20 rounded-2xl hover:bg-white/20 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-white/40 active:translate-y-0"
     >
       <img src={playstore} alt="Play Store" className="w-7 h-7" />
