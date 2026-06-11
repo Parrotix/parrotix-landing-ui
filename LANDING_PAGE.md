@@ -165,7 +165,7 @@ Scroll-reveal uses the `useInView` hook with Tailwind `opacity-0 → opacity-100
   4. XP & Level System
   5. Voice Practice
   6. Video Lessons
-  7. Hearts System (2-col span)
+  7. Hearts System (2-col span) 
 
 ### 5. How It Works (`HowItWorks.tsx`)
 - Light gray (`bg-slate-50`) background
